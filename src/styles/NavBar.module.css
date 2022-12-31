@@ -5,8 +5,9 @@
   left: 0;
   right: 0;
   height: 80px;
-  width: 1280px;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   box-shadow: 0 0 25px 0 black;
 }
@@ -18,8 +19,13 @@
 .logoDiv {
   display: flex;
   flex: 1;
+  align-items: center;
   /* height: 100%; */
-  width: 227px;
+  color: white;
+  padding: 20px 0px;
+  margin-left: 30px;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 
@@ -34,12 +40,13 @@
   justify-content: space-between;
   height: 100%;
   width: 137px;
+  cursor: pointer;
 }
 
 .header li a {
   color: white;
   text-decoration: none;
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
   font-style: normal;
   font-weight: 400;
 font-size: 20px;
