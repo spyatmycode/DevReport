@@ -2,6 +2,7 @@ import React from 'react';
 // import NavBar from './components/NavBar';
 
 import Article from './components/Article';
+import SignInPage from './Pages/SignInPage';
 
 // import AppCss from '../src/styles/app.module.css'
 
@@ -9,7 +10,8 @@ import Article from './components/Article';
 function App() {
   return (
     <>
-      <Article />
+      {/* <Article /> */}
+      <SignInPage/>
     </>
   );
 }

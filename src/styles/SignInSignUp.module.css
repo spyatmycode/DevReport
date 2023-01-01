@@ -1,0 +1,22 @@
+:root {
+    --primaryColor: #007BFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.forms {
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+    color: #000;
+}
+.card {
+    border-radius: 19px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #d3d3d3,
+             -8px -8px 16px #ededed;
+    margin: auto;
+    
+}
