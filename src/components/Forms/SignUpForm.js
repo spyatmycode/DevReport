@@ -30,9 +30,8 @@ function SignUpForm() {
                 <i className={`${SignUpCss.showPassword} far fa-eye`} onClick={showPassword}></i>
             </div>
         </div>
-        <a href='#'>forgot password?</a>
         <div className={SignUpCss.formGroup}>
-            <button className={SignUpCss.btn} type='submit'>Sign In <i class="fa-solid fa-arrow-right"></i></button>
+            <button className={SignUpCss.btn} type='submit'>Sign Up <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </form>
   )
