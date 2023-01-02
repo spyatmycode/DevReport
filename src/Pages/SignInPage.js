@@ -3,13 +3,13 @@ import Form from '../components/Forms/Form';
 import SignInForm from '../components/Forms/SignInForm';
 import SignInCss from '../styles/SignInSignUp.module.css'
 
-export default function SignInPage() {
+export default function SignInPage({ setIsLoggedIn }) {
   return (
     <Form>
-            <i className={`${SignInCss.icon} fa-solid fa-arrow-right-to-bracket`}></i>
-            <h2 className={SignInCss.mheading}>Welcome!</h2>
-            <p className={SignInCss.mtext}>Sign in to your account</p>
-            <SignInForm></SignInForm>
+      <i className={`${SignInCss.icon} fa-solid fa-arrow-right-to-bracket`}></i>
+      <h2 className={SignInCss.mheading}>Welcome!</h2>
+      <p className={SignInCss.mtext}>Sign in to your account</p>
+      <SignInForm setIsLoggedIn={setIsLoggedIn}></SignInForm>
     </Form>
   )
 }

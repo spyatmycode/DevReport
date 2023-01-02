@@ -52,24 +52,24 @@ a {
     margin-top: 3rem;   
 }
 
-label {
+.label {
     display: block;
     text-align: start;
     font-size: 1.2rem;
 
 }
-input {
+.input {
     width: 100%;
     border: none;
     background-color: #e0e0e0;
-    padding: 1rem;
+    padding: 1.5rem;
     padding-left: 0;
     font-size: 1rem;
     border-bottom: 1px #555 solid;
     outline: none;
 }
 
-input:focus {
+.input:focus {
     border-bottom: 2px #000 solid;
 }
 .password{

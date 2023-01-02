@@ -5,9 +5,9 @@ import Card from '../UI/Card'
 function Form(props) {
   return (
     <div className={FormCss.forms}>
-        <Card>
-            {props.children}
-        </Card>
+      <Card>
+        {props.children}
+      </Card>
     </div>
   )
 }
