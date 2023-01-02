@@ -112,7 +112,7 @@ const CreatePost = () => {
 
 
                     <div className='m-5 p-5 bg-blue-100 rounded-md'>
-                        <label htmlFor="" className='text-lg font-semibold'>Detaiils</label>
+                        <label htmlFor="" className='text-lg font-semibold'>Details</label>
                         <p>Introduce your thoughts and expand on what you put in the title</p>
                         <textarea name="content" onChange={handleChange} id="" cols="30" rows="10" className='w-full p-3 my-3 rounded-md border border-black'></textarea>
                     </div>

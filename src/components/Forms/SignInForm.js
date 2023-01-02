@@ -4,61 +4,46 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-
-
 function SignInForm({ setIsLoggedIn }) {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const [returnUser, setReturnUser] = useState({ email: "", password: "" })
+  const [returnUser, setReturnUser] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
-
     const { name, value } = e.target;
-    setReturnUser({ ...returnUser, [name]: value })
-
-  }
-
-
+    setReturnUser({ ...returnUser, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
-
-
-
-    e.preventDefault()
+    e.preventDefault();
 
     console.log(returnUser);
     if (returnUser.email && returnUser.password) {
-      await signInWithEmailAndPassword(auth, returnUser.email, returnUser.password)
+      await signInWithEmailAndPassword(
+        auth,
+        returnUser.email,
+        returnUser.password
+      )
         .then((userCred) => {
           console.log(userCred);
-          e.target.reset()
-          setIsLoggedIn(true)
-          localStorage.setItem("isLoggedIn", true)
-          alert("DevReport: Sign In successful")
+          e.target.reset();
+          setIsLoggedIn(true);
+          localStorage.setItem("isLoggedIn", true);
+          alert("DevReport: Sign In successful");
 
-          navigate('/feed')
-
+          navigate("/feed");
 
           // Email verification sent!
 
           // ...
-        }).catch((err) => {
-          console.log(err);
         })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert("Please fill in all fields");
     }
-    else {
-      alert("Please fill in all fields")
-    }
-
-
-
-
-
-  }
-
-
-
+  };
 
   /* function showPassword() {
     let x = document.getElementById("passwordInput");
@@ -109,8 +94,8 @@ function SignInForm({ setIsLoggedIn }) {
           placeholder="Enter your email"
           required
           className={SignInCss.input}
-        // value={emailInput}
-        // onChange ={emailInputHandler}
+          // value={emailInput}
+          // onChange ={emailInputHandler}
         />
       </div>
       <div className={SignInCss.formGroup}>
@@ -124,13 +109,15 @@ function SignInForm({ setIsLoggedIn }) {
             placeholder="Enter your password"
             required
             className={SignInCss.input}
-          // value={passwordInput}
-          // onChange={passwordInputHandler}
+            // value={passwordInput}
+            // onChange={passwordInputHandler}
           />
-          {<i
-            className={`${SignInCss.showPassword} far fa-eye`}
-            onClick={showPassword}
-          ></i>}
+          {
+            <i
+              className={`${SignInCss.showPassword} far fa-eye`}
+              onClick={showPassword}
+            ></i>
+          }
         </div>
       </div>
       <a href="/">forgot password?</a>

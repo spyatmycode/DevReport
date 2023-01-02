@@ -28,11 +28,11 @@
 
 .category{
     background-color:#007BFF;
-    width: 100px;
+    /* width: 100px; */
     text-align: center;
     border-radius: 7px;
     color: white;
-    padding:5px;
+    padding:9px;
     font-size: 12px;
     text-transform: uppercase;
     

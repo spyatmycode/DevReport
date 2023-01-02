@@ -1,10 +1,13 @@
+:root {
+  --primaryColor: #007BFF;
+}
 .header {
-  background-color: #000000;
+  background-color: var(--primaryColor);
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,9 +42,14 @@
   /* margin: 30px; */
   list-style: none;
   justify-content: space-between;
-  height: 100%;
-  width: 137px;
+  margin: 10px;
+  padding: 10px;
   cursor: pointer;
+  border-radius: 15px;
+}
+
+.header li:hover {
+  background-color: #229dff;
 }
 
 .header li a {
