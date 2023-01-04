@@ -32,13 +32,13 @@ const Article = (props) => {
 
                 <p className={ArticleCSS.topic} >{title}</p>
 
-                <span className='flex w-1/2 items-center justify-between'>
+                <span className='flex w-full items-center justify-between'>
                     <h6 className={ArticleCSS.author}>{authorName}</h6>
 
 
                     <span>
                         {
-                            auth.currentUser.uid === authorId ? <h4 onClick={() => { deleteDoc(articleId) }} className='text-red-600 font-semibold'>
+                            auth.currentUser.uid === authorId ? <h4 onClick={() => { deleteDoc(articleId) }} className='text-red-600 font-semibold mx-4 cursor-pointer'>
                                 Delete
                             </h4> :
                                 null

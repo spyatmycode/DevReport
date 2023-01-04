@@ -18,11 +18,14 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family:'Open sans', 'Roboto', sans-serif;
+  overflow-x: hidden !important;
 }
 i {
   background-color: var(--primaryColor);
@@ -32,7 +35,7 @@ i {
 }
 
 .active{
-  color: green;
+  background-color: #229dff !important;
 }
 
 
