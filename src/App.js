@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Protected from './components/ProtectedRoute';
 import CreatePost from './Pages/CreatePost';
 import Feed from './Pages/Feed';
+import Post from './Pages/Post';
 
 
 
@@ -35,6 +36,8 @@ function App() {
             <Route path='/feed' element={<Protected isLoggedIn={isLoggedIn}><Feed /></Protected>} />
 
             <Route path='*' element={<><h1>404 Error: Not found</h1></>} />
+
+            <Route path='/feed/:id' element={<Protected isLoggedIn={isLoggedIn}><Post /></Protected>} />
 
           </Route>
 

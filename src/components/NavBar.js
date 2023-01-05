@@ -65,7 +65,12 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
       </header>
 
       <Outlet />
+
       <Footer />
+
+
+
+
     </>
   );
 };

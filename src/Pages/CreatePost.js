@@ -55,6 +55,7 @@ const CreatePost = () => {
         category: "",
       });
       e.target.reset();
+      alert("Post added successfully")
     });
   };
   return (
