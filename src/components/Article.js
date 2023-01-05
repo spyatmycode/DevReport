@@ -38,7 +38,7 @@ const Article = (props) => {
 
                     <span>
                         {
-                            auth.currentUser.uid === authorId ? <h4 onClick={() => { deleteDoc(articleId) }} className='text-red-600 font-semibold mx-4 cursor-pointer'>
+                            auth.currentUser.uid === authorId ? <h4 onClick={() => { deleteDoc(articleId) }} className='text-red-600 font-semibold mx-4 cursor-pointer relative z-50'>
                                 Delete
                             </h4> :
                                 null

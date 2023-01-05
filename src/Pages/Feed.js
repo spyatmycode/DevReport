@@ -4,6 +4,7 @@ import Article from "../components/Article";
 import { database, auth } from "../firebase/firebaseConfig";
 import { Link } from "react-router-dom";
 
+
 const Feed = () => {
   const deleteArticle = async (docId) => {
     const docRef = doc(database, "Articles", docId);

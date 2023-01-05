@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { database } from './firebase/firebaseConfig';
+import { collection, getDocs } from 'firebase/firestore';
 import SignInForm from './Pages/SignInPage'
 import SignUpForm from './Pages/SignUpPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -18,6 +20,28 @@ import Post from './Pages/Post';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") ? JSON.parse(localStorage.getItem("isLoggedIn")) : false)
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    const getPosts = async () => {
+      await getDocs(collection(database, "Articles"))
+        .then((res) => {
+
+          setPosts(res.docs)
+
+
+
+
+
+        }).catch((err) => { console.log(err); })
+    }
+    getPosts()
+
+
+
+  }, [])
+
+
 
 
 
@@ -37,7 +61,7 @@ function App() {
 
             <Route path='*' element={<><h1>404 Error: Not found</h1></>} />
 
-            <Route path='/feed/:id' element={<Protected isLoggedIn={isLoggedIn}><Post /></Protected>} />
+            <Route path='/feed/:id' element={<Protected isLoggedIn={isLoggedIn}><Post posts={posts} /></Protected>} />
 
           </Route>
 

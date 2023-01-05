@@ -73,7 +73,7 @@ const CreatePost = () => {
 
           <h5 className="text-lg font-semibold">Steps</h5>
           <ul className="list-disc">
-            <li className="m-5">Summarize your title in one line.</li>
+            <li className="m-5 list-disc">Summarize your title in one line.</li>
             <li className="m-5">Expatiate your article in more detail.</li>
             <li className="m-5">
               Review your content and then publish it to the site.
@@ -92,6 +92,7 @@ const CreatePost = () => {
               onChange={handleChange}
               type="text"
               className="p-3 w-full border-black my-3 rounded-md border"
+              required
             />
           </div>
 
@@ -100,6 +101,7 @@ const CreatePost = () => {
             defaultValue="Category"
             onChange={handleChange}
             className="mx-5 p-5 bg-slate-300 rounded-md"
+            required
           >
             <option value="Category">Category</option>
             <option value="Lifestyle">Lifestyle</option>
@@ -111,7 +113,7 @@ const CreatePost = () => {
             <option value="CSS">CSS</option>
             <option value="HTML">HTML</option>
             <option value="Open Source">Open Source</option>
-            <option value="Flutter">Flutter</option>
+            <option value="Firebase">Firebase</option>
             <option value="Flutter">Flutter</option>
             <option value="Collaboration">Collaboration</option>
           </select>
