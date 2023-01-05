@@ -4,6 +4,7 @@ import NavCss from '../styles/NavBar.module.css';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase/firebaseConfig';
 import Toggle from './Toggle';
+import Footer from './Footer';
 import '../index.css'
 
 const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
@@ -64,6 +65,10 @@ const NavBar = ({ isLoggedIn, setIsLoggedIn }) => {
       </header>
 
       <Outlet />
+
+      <Footer />
+
+
 
 
     </>
