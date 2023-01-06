@@ -36,20 +36,24 @@ a {
 /* Form styling */
 .forms {
     background-color: #fff;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card {
     border-radius: 19px;
     background: #e0e0e0;
-    box-shadow:  8px 8px 16px #d3d3d3,
-             -8px -8px 16px #ededed;
+    /* box-shadow:  8px 8px 16px #d3d3d3,
+             -8px -8px 16px #ededed; */
     margin: auto;
+    margin-bottom: 50px;
     padding: 2rem;
     width: 30rem;
     text-align: center;
-    margin-top: 3rem;   
+    margin-top: 1rem;   
 }
 
 .label {
@@ -82,7 +86,8 @@ a {
     display: flex;
 }
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 0.5rem;
     border: none;
     border-radius: 10px;

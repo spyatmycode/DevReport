@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 const Feed = () => {
   const deleteArticle = async (docId) => {
-    const docRef = doc(database, "Articles", docId);
+    const docRef = doc(database, "Articles", docId);//For delete
 
     await deleteDoc(docRef);
 
-    console.log(auth.currentUser.email);
+
   };
 
   const docRef = collection(database, "Articles");
@@ -20,7 +20,9 @@ const Feed = () => {
   const getDocuments = async () => {
     await getDocs(docRef).then((res) => {
       setFeed(res.docs);
-      console.log(1);
+      localStorage.setItem("posts", JSON.stringify(res.docs))
+
+
 
     });
   };
@@ -33,11 +35,11 @@ const Feed = () => {
     <div className="grid w-auto my-10 grid-cols-1 md:grid-cols-3 place-items-center gap-y-20 md:w-11/12 m-auto ">
       {feed.map((article) => {
         // { authorId: "", authorName: "", content: "", title: "", category: "" }
-        const { content, title, authorName, category, authorId, imgUrl } =
+        const { content, title, authorName, category, authorId, imgUrl, uniqueId } =
           article._document.data.value.mapValue.fields;
 
         return (
-          <Link to={`/feed/${article.id}`} key={article.id}>
+          <Link to={`/feed/${uniqueId.stringValue}`} key={article.id}>
             <Article
               key={article.id}
               articleId={article.id}
@@ -47,6 +49,7 @@ const Feed = () => {
               category={category.stringValue}
               authorId={authorId.stringValue}
               imgUrl={imgUrl.stringValue}
+              uniqueId={uniqueId.stringValue}
               deleteDoc={deleteArticle}
             />
           </Link>

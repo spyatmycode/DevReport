@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { database } from "../firebase/firebaseConfig";
 import { auth } from "../firebase/firebaseConfig";
+import { v4 as uuid } from "uuid";
+
+const uniqueKey = uuid()
+console.log(uniqueKey);
 
 /* authorId
 ""
@@ -45,6 +49,7 @@ const CreatePost = () => {
       title: post.title,
       category: post.category,
       imgUrl: `https://source.unsplash.com/1600x900/? ${post.category}`,
+      uniqueId: uniqueKey
     }).then((res) => {
       navigate("/feed");
       setPost({

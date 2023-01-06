@@ -85,7 +85,7 @@ function SignInForm({ setIsLoggedIn }) {
   } */
   return (
     <form onSubmit={handleSubmit}>
-      <div className={SignInCss.formGroup}>
+      <div className={`${SignInCss.formGroup} md:!w-auto`}>
         <label className={SignInCss.label}>E-mail</label>
         <input
           onChange={handleChange}
@@ -94,8 +94,8 @@ function SignInForm({ setIsLoggedIn }) {
           placeholder="Enter your email"
           required
           className={SignInCss.input}
-          // value={emailInput}
-          // onChange ={emailInputHandler}
+        // value={emailInput}
+        // onChange ={emailInputHandler}
         />
       </div>
       <div className={SignInCss.formGroup}>
@@ -109,8 +109,8 @@ function SignInForm({ setIsLoggedIn }) {
             placeholder="Enter your password"
             required
             className={SignInCss.input}
-            // value={passwordInput}
-            // onChange={passwordInputHandler}
+          // value={passwordInput}
+          // onChange={passwordInputHandler}
           />
           {
             <i

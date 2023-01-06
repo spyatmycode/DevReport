@@ -22,12 +22,19 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") ? JSON.parse(localStorage.getItem("isLoggedIn")) : false)
   const [posts, setPosts] = useState([])
 
+
+
   useEffect(() => {
     const getPosts = async () => {
       await getDocs(collection(database, "Articles"))
         .then((res) => {
 
           setPosts(res.docs)
+
+          localStorage.setItem("posts", JSON.stringify(res.docs))
+
+          console.log(res.docs);
+
 
 
 
@@ -67,7 +74,7 @@ function App() {
 
 
         </Routes>
-      </BrowserRouter>     
+      </BrowserRouter>
     </>
   );
 }
