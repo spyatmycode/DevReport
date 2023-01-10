@@ -34,7 +34,7 @@ const Post = () => {
     return (
         <div className='flex flex-col  w-full py-10 text-left'>
             <div className='mb-4'>
-                <h1 className='font-black text-3xl mx-10'>
+                <h1 className='font-black text-4xl mx-10'>
                     {title.stringValue}
                 </h1>
 
@@ -56,7 +56,7 @@ const Post = () => {
 
             <img src={imgUrl.stringValue} alt={title.stringValue} className='w-5/6 h-80 mx-10 md:w-10/12 md:h-5/6' />
 
-            <p className='mx-10 my-10 text-lg font-medium leading-9'>
+            <p className='mx-10 my-10 text-3xl font-medium leading-9 md:w-10/12 '>
                 {content.stringValue}
 
             </p>
