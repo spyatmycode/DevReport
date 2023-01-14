@@ -29,7 +29,7 @@ a{
   padding: 0;
   box-sizing: border-box;
   font-family:'Open sans', 'Roboto', sans-serif;
-  overflow-x: hidden !important;
+  
 }
 i {
   background-color: var(--primaryColor);

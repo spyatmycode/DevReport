@@ -48,7 +48,7 @@ const CreatePost = () => {
       content: post.content,
       title: post.title,
       category: post.category,
-      imgUrl: `https://source.unsplash.com/1600x900/? ${post.category}`,
+      imgUrl: `https://source.unsplash.com/1600x900/? ${post.category}-program`,
       uniqueId: uniqueKey
     }).then((res) => {
       navigate("/feed");
